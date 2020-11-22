@@ -1,0 +1,19 @@
+td,
+th {
+  padding: 1rem !important;
+}
+
+th:last-child {
+  width: 1%;
+  text-align: center;
+}
+table {
+  width: 100%;
+}
+.copy {
+  cursor: pointer;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}

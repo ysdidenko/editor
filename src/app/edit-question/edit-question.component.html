@@ -1,0 +1,41 @@
+<h2 mat-dialog-title >{{question ? 'Edit' : 'Add'}} question</h2>
+<mat-dialog-content [formGroup]="form">
+   <mat-form-field style="width:376px;">
+       <mat-label>Question</mat-label>
+       <input matInput formControlName="question" required>
+   </mat-form-field>
+    <mat-form-field>
+        <mat-label>Correct answer</mat-label>
+        <input matInput formControlName="answer1" required>
+       
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Answer</mat-label>
+        <input matInput formControlName="answer2" required>
+        
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Answer</mat-label>
+        <input matInput formControlName="answer3" required>
+        
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Answer</mat-label>
+        
+        <input matInput formControlName="answer4" required>
+        
+    </mat-form-field>
+  
+<mat-form-field>
+ <mat-label>Points</mat-label>
+ <input matInput formControlName="points" required>
+</mat-form-field>
+<mat-form-field style="width:376px;">
+    <mat-label>Description</mat-label>
+    <textarea matInput rows="5" formControlName="description" required></textarea>
+</mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="undefined">Cancel</button>
+    <button mat-raised-button [mat-dialog-close]="getValue()" color="accent" [disabled]="form.invalid">Save</button>
+</mat-dialog-actions>

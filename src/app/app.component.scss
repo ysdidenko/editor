@@ -1,0 +1,13 @@
+:host {
+  padding: 1rem;
+  display: block;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+:host ::ng-deep .mat-tab-body-content {
+  padding: 1rem;
+  box-sizing: border-box;
+}

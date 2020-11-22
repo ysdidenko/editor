@@ -1,0 +1,16 @@
+<h2 mat-dialog-title *ngIf="category">Edit category {{category.name}}</h2>
+<h2 mat-dialog-title *ngIf="!category">Add category</h2>
+<mat-dialog-content>
+   <mat-form-field>
+       <mat-label>Category name</mat-label>
+       <input matInput [formControl]="categoryName" required>
+   </mat-form-field>
+   <mat-form-field>
+    <mat-label>Category icon</mat-label>
+    <input matInput [formControl]="categoryIcon" required>
+</mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="undefined">Cancel</button>
+    <button mat-raised-button [mat-dialog-close]="getValue()" color="accent" [disabled]="categoryName.invalid || categoryIcon.invalid">Save</button>
+</mat-dialog-actions>
